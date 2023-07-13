@@ -22,12 +22,46 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./src/css/style.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/97e703ac45.js" crossorigin="anonymous"></script>
   <script defer src="./src/js/main.js"></script>
 </head>
 <body>
   <header id="header">
     <div class="inner">
-      <h1><a href="javascript:void(0)"></a><img src="./src/images/logo.png" alt="에어비앤비 로고"></h1>
+      <div class="logo">
+        <h1>
+          <a href="javascript:void(0)">
+            <img src="./src/images/logo.png" alt="에어비앤비 로고">
+          </a>
+          <span class="sr-only">에어비앤비 로고</span>
+        </h1>
+      </div>
+      <div class="search">
+        <button type="button" class="search-btn">
+          <div class="search-text">어디든지</div>
+          <div class="search-text ">언제든 일주일</div>
+          <div class="search-text grey">게스트 추가</div>
+          <span class="search-ico">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <span class="sr-only">검색</span>
+        </button>
+      </div>
+      <ul class="util">
+        <li class="util-home"><a href="javascript:void(0)">당신의 공간을 에어비앤비하세요</a></li>
+        <li class="util-languege">
+          <button type="button">
+            <i class="fa-solid fa-globe"></i>
+          </button>
+        </li>
+        <li class="util-menu">
+          <button type="button">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-user"></i>
+          </button>
+        </li>
+      </ul>
     </div>
   </header>
 </body>

@@ -1,0 +1,6 @@
+// Flex 정렬
+@mixin flexAlign ($x: null, $y: null){
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}

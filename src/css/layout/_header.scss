@@ -1,0 +1,106 @@
+#header {
+  border-bottom: 1px solid $greyDD;
+  .inner {
+    @include flexAlign(null, center);
+    height: 80px;
+    .logo {
+      width: 100%;
+      h1 {
+        img {
+            width: 118px;
+        }
+      }
+    }
+    .search {
+      @include flexAlign(center, null);
+      width: 100%;
+      .search-btn {
+        @include flexAlign(space-between, center);
+        width: 363px;
+        height: 48px;
+        border: 1px solid $greyDD;
+        border-radius: 25px;
+        font-size: 14px;
+        box-shadow: 1px 1px 1px $greyE9;         
+        &:hover {
+          box-shadow: 3px 3px 5px $greyE9; 
+        }
+        .search-text {
+          position: relative;
+          padding: 0 16px;
+          color: $grey22;
+          font-weight: 500;
+          line-height: 22px;
+          &.grey {
+            color: $grey71;
+            font-weight: normal;
+          }
+          &:not(&.grey):after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: $greyDD;
+          }
+        }
+        .search-ico {
+          font-size: 12px;
+          color: $white;
+          background-color: $red5c;
+          padding: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .util {
+      width: 100%;
+      @include flexAlign(end, center);
+      .util-home {
+        a {
+          padding: 14px;
+          font-size: 14px;
+          font-weight: 500;
+          &:hover {
+            border-radius: 18px;
+            background-color: $greyF7;
+          }     
+        }
+      }
+      .util-languege {
+        button {
+          width: 46px;
+          height: 42px;
+          &:hover {
+            border-radius: 18px;
+            background-color: $greyF7;
+          }         
+          i {
+            font-size: 15px;
+          }
+        }
+      }
+      .util-menu {
+        @include flexAlign(null, center);
+        margin-left: 10px;
+        button {
+          @include flexAlign(null, center);
+          padding: 6px 6px 6px 12px;
+          border: 1px solid $greyDD;
+          border-radius: 21px;
+          color: $grey71;
+          font-size: 16px;  
+          &:hover {
+            box-shadow: 3px 3px 5px $greyE9; 
+          }        
+          i {
+            &:last-child {
+              font-size: 28px;
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
