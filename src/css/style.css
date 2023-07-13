@@ -11,6 +11,7 @@ a {
 
 img {
   width: 100%;
+  user-select: none;
 }
 
 button {
@@ -175,7 +176,7 @@ button {
   font-size: 28px;
   margin-left: 18px;
 }
-#header .inner .util .bar .user-util {
+#header .inner .util .bar .user {
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
@@ -187,35 +188,35 @@ button {
   opacity: 0;
   visibility: hidden;
 }
-#header .inner .util .bar .user-util .depth-1 {
+#header .inner .util .bar .user .depth-1 {
   padding-bottom: 8px;
   border-bottom: 1px solid #f7f7f7;
 }
-#header .inner .util .bar .user-util .depth-1 button {
+#header .inner .util .bar .user .depth-1 button {
   width: 100%;
   padding: 15px;
   font-size: 14px;
   text-align: left;
   font-weight: 300;
 }
-#header .inner .util .bar .user-util .depth-1 button:hover {
+#header .inner .util .bar .user .depth-1 button:hover {
   background-color: #f7f7f7;
 }
-#header .inner .util .bar .user-util .depth-1 .sign-up {
+#header .inner .util .bar .user .depth-1 .sign-up {
   font-weight: 500;
 }
-#header .inner .util .bar .user-util .depth-2 {
+#header .inner .util .bar .user .depth-2 {
   padding-top: 8px;
 }
-#header .inner .util .bar .user-util .depth-2 a {
+#header .inner .util .bar .user .depth-2 a {
   padding: 15px;
   font-size: 14px;
   font-weight: 300;
 }
-#header .inner .util .bar .user-util .depth-2 a:hover {
+#header .inner .util .bar .user .depth-2 a:hover {
   background-color: #f7f7f7;
 }
-#header .inner .util .bar.show .user-util {
+#header .inner .util .bar.show .user {
   opacity: 1;
   visibility: visible;
 }
