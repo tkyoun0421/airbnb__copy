@@ -1,9 +1,9 @@
 ---
 name: issue template
 about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+title: "[ Feat ]"
+labels: enhancement
+assignees: tkyoun0421
 
 ---
 
