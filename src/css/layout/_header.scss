@@ -10,6 +10,7 @@
     @include flexAlign(space-between, center);
     height: 80px;
     .logo {
+      width: 100%;
       h1 {
         img {
             width: 118px;
@@ -17,6 +18,7 @@
       }
     }
     .search {
+      width: 100%;
       @include flexAlign(center, null);
       position: relative;
       .search-btn {
@@ -78,6 +80,7 @@
       }
     }
     .util {
+      width: 100%;
       @include flexAlign(end, center);
       .user-space {
         a {
