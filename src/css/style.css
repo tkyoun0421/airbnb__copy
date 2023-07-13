@@ -64,14 +64,10 @@ button {
   align-items: center;
   height: 80px;
 }
-#header .inner .logo {
-  width: 100%;
-}
 #header .inner .logo h1 img {
   width: 118px;
 }
 #header .inner .search {
-  width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
@@ -118,23 +114,7 @@ button {
   border-radius: 50%;
   margin: 7px 7px 7px 0;
 }
-#header .inner .search .search-form {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-#header .inner .search .search-form .search-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#header .inner .search .search-form .search-nav ul li button {
-  padding: 20px;
-  font-size: 16px;
-}
 #header .inner .util {
-  width: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
