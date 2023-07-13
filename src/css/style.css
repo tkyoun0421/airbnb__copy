@@ -172,6 +172,7 @@ button {
   padding: 8px 0;
   opacity: 0;
   visibility: hidden;
+  transition: 0.2s;
 }
 #header .inner .util .bar .user .depth-1 {
   padding-bottom: 8px;
