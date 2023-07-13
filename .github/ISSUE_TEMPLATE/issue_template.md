@@ -1,5 +1,5 @@
 ---
-name: template
+name: issue template
 about: Suggest an idea for this project
 title: ''
 labels: ''
