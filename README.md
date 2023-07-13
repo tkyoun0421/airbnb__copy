@@ -13,7 +13,7 @@
 
 Name | Github URL | Blog URL |
 -- | -- | -- |
-윤태관(Front-end Engineer) | https://github.com/tkyoun0421 | https://dev-taegwan.tistory.com/ 
+**윤태관(Front-end Engineer)** | https://github.com/tkyoun0421 | https://dev-taegwan.tistory.com/ 
 
 <br/>
 
