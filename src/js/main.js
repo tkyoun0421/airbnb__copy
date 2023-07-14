@@ -27,7 +27,7 @@ const categoryEl = document.querySelector('.category');
 let template = '';
 
 for(let i = 0; i < categoryData.length; i++) {
-    const div = document.createElement('div');
+    const div = document.createElement('div')
 
     template = `
     <button type="button">
@@ -35,18 +35,22 @@ for(let i = 0; i < categoryData.length; i++) {
         <span>${categoryData[i].title}</span>
     </button>
     `
-    div.classList.add('category-item');
-    div.innerHTML = template;
-    categoryEl.appendChild(div);
+    div.classList.add('category-item')
+    div.innerHTML = template
+    categoryEl.appendChild(div)
 }
 
 // 스크롤 애니메이션
 const categoryWrapEl = document.querySelector('.category-wrap');
-const CHECK_SCROLL_VALUE = 1;
+const CHECK_DOWN_SCROLL = 1;
 
 window.addEventListener('scroll', function(){
-    if(window.scrollY > CHECK_SCROLL_VALUE) {
-        AddClassToCategory()
+    if(window.scrollY > CHECK_DOWN_SCROLL) {
+        if (categoryWrapEl.classList.contains('on')){
+            return
+        } else {
+            AddClassToCategory()
+        }
     } else {
         RemoveClassToCategory()
     }
