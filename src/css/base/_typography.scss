@@ -3,6 +3,10 @@
 body {
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-size: 16px;
-  line-height: 1;
-  word-break: keep-all;
+  color: $grey22;
+}
+
+button {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  color: $grey22;
 }
