@@ -36,9 +36,7 @@ for (let i = 0; i < categoryData.length; i++) {
     categoryEl.appendChild(div)
 }
 
-window.addEventListener('load', function () {
-    categoryEl.childNodes[0].classList.add('active');
-});
+window.addEventListener('load', () => categoryEl.childNodes[0].classList.add('active'));
 
 // 카테고리 클릭 애니메이션
 const categoriItemEls = [...document.querySelectorAll('.category-item')];
@@ -68,7 +66,7 @@ const RemoveClassToCategory = () => categoryWrapEl.classList.remove('on');
 const roomData = JSON.parse(JSON.stringify(roomList));
 const roomInfoEl = document.querySelector('.room-info');
 
-for (let i = 0; i < roomList.length; i++) {
+for (let i = 0; i < 20; i++) {
     const div = document.createElement('div');
 
     template = `
@@ -88,6 +86,43 @@ for (let i = 0; i < roomList.length; i++) {
     div.classList.add('room-item');
     div.innerHTML = template
     roomInfoEl.appendChild(div);
-
 }
 
+window.addEventListener('scroll', getRoomData)
+let roomItemValue = 0;
+
+function getRoomData() {
+    const roomItemEls = [...document.querySelectorAll('.room-item')]
+    const winScrollValue = Math.floor((window.scrollY + window.innerHeight) * 1.002)
+    const bodyScrollHeight = Math.floor(document.body.scrollHeight)
+    const roomDataLength = roomData.length
+    let getDataNum = parseInt(roomItemValue + 6)
+
+
+    if (winScrollValue >= bodyScrollHeight) {
+        if (roomDataLength >= roomItemEls.length) {
+            for (let i = roomItemValue; i < getDataNum; i++) {
+                const div = document.createElement('div');
+                roomItemValue = parseInt(roomItemValue + 1)
+
+                template = `
+                <a href="javascript:void(0)">
+                    <div class="room-img">
+                        <img src=${roomData[i].url} />
+                    </div>
+                    <div class="room-text">
+                        <p class="room-location">${roomData[i].location}<span class="room-score"><i class="fa-solid fa-star"></i><span>${roomData[i].score}</span></span></p>
+                        <p class="room-distance">${roomData[i].distance}</p>
+                        <p class="room-distance">${roomData[i].date}</p>
+                        <p class="room-price"><strong>${roomData[i].price}</strong> /박</p>        
+                    </div>
+                </a>    
+                `;
+
+                div.classList.add('room-item');
+                div.innerHTML = template
+                roomInfoEl.appendChild(div);
+            }
+        }
+    }
+}
