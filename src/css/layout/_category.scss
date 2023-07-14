@@ -3,13 +3,14 @@
   .inner {
     @include flexAlign(space-between, center);
     margin-top: 20px;
+    transition: 0.2s;
     .container {
       width: 98%;
       overflow: hidden;
       position: relative;
       .category {
         display: flex;
-        gap: 50px;
+        gap: 51px;
         .category-item {
           position: relative;
           flex-basis: auto;
@@ -67,10 +68,12 @@
         }
         &.left {
           left: 0;
+          display: none;
         }
         &.right {
           right: 0;
           background-color: $white;
+          box-shadow: -10px 0 20px 10px $white;
         }
       }
     }
@@ -86,6 +89,14 @@
         border-radius: 12px;
         font-size: 12px;
       }
+    }
+  }
+  &.on {
+    position: fixed;
+    width: 100%;
+    .inner {
+      margin-top: 0;
+      box-shadow: 0px 1px 1px $greyDD;
     }
   }
 }
