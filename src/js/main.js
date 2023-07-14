@@ -26,13 +26,13 @@ const showUserMenu = () => {
     barEl.classList.add('show')
 }
 
+// 카테고리 메뉴 생성
 const categoryData = JSON.parse(JSON.stringify(categoryList));
 const categoryEl = document.querySelector('.category');
 let template = '';
 
 for(let i = 0; i < categoryData.length; i++) {
     const div = document.createElement('div');
-    const dataLength = categoryData.length; 
 
     template = `
     <button type="button">
@@ -44,3 +44,17 @@ for(let i = 0; i < categoryData.length; i++) {
     div.innerHTML = template;
     categoryEl.appendChild(div);
 }
+
+// 스크롤 애니메이션
+const categoryWrapEl = document.querySelector('.category-wrap');
+
+window.addEventListener('scroll', function(){
+    if(window.scrollY > 1) {
+        AddClassOnCategory()
+    } else {
+        RemoveClassOnCategory()
+    }
+});
+
+const AddClassOnCategory = () => categoryWrapEl.classList.add('on');
+const RemoveClassOnCategory = () => categoryWrapEl.classList.remove('on');
