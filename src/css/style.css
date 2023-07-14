@@ -432,8 +432,8 @@ button {
 }
 #main .inner .room-info .room-item a .room-img .room-like {
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 20px;
+  right: 20px;
 }
 #main .inner .room-info .room-item a .room-img .room-like button {
   font-size: 20px;
