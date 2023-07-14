@@ -18,13 +18,8 @@ userEl.addEventListener('click', function(e){
     e.stopPropagation() // 이벤트 버블링 막는 것
 });
 
-const hideUserMenu = () => {
-    barEl.classList.remove('show')
-}
-
-const showUserMenu = () => {
-    barEl.classList.add('show')
-}
+const hideUserMenu = () => barEl.classList.remove('show');
+const showUserMenu = () => barEl.classList.add('show');
 
 // 카테고리 메뉴 생성
 const categoryData = JSON.parse(JSON.stringify(categoryList));
@@ -47,14 +42,15 @@ for(let i = 0; i < categoryData.length; i++) {
 
 // 스크롤 애니메이션
 const categoryWrapEl = document.querySelector('.category-wrap');
+const CHECK_SCROLL_VALUE = 1;
 
 window.addEventListener('scroll', function(){
-    if(window.scrollY > 1) {
-        AddClassOnCategory()
+    if(window.scrollY > CHECK_SCROLL_VALUE) {
+        AddClassToCategory()
     } else {
-        RemoveClassOnCategory()
+        RemoveClassToCategory()
     }
 });
 
-const AddClassOnCategory = () => categoryWrapEl.classList.add('on');
-const RemoveClassOnCategory = () => categoryWrapEl.classList.remove('on');
+const AddClassToCategory = () => categoryWrapEl.classList.add('on');
+const RemoveClassToCategory = () => categoryWrapEl.classList.remove('on');
