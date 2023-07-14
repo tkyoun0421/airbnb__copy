@@ -133,7 +133,7 @@ function getRoomData() {
                             </button>
                         </div>
                         <ul class="room-dot">
-                            <li class="dot"></li>
+                            <li class="dot on"></li>
                             <li class="dot"></li>
                             <li class="dot"></li>
                             <li class="dot"></li>
