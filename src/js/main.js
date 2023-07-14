@@ -1,6 +1,6 @@
 
-const barEl = document.querySelector('.bar');
-const userEl = document.querySelector('.user');
+const barEl = document.querySelector('.bar')
+const userEl = document.querySelector('.user')
 
 barEl.addEventListener('click', function (e) {
     e.stopPropagation()
@@ -14,12 +14,12 @@ userEl.addEventListener('click', function (e) {
     e.stopPropagation() // 이벤트 버블링 막는 것
 });
 
-const hideUserMenu = () => barEl.classList.remove('show');
-const showUserMenu = () => barEl.classList.add('show');
+const hideUserMenu = () => barEl.classList.remove('show')
+const showUserMenu = () => barEl.classList.add('show')
 
 // 카테고리 메뉴 생성
-const categoryData = JSON.parse(JSON.stringify(categoryList));
-const categoryEl = document.querySelector('.category');
+const categoryData = JSON.parse(JSON.stringify(categoryList))
+const categoryEl = document.querySelector('.category')
 let template = '';
 
 for (let i = 0; i < categoryData.length; i++) {
@@ -36,7 +36,7 @@ for (let i = 0; i < categoryData.length; i++) {
     categoryEl.appendChild(div)
 }
 
-window.addEventListener('load', () => categoryEl.childNodes[0].classList.add('active'));
+window.addEventListener('load', () => categoryEl.childNodes[0].classList.add('active'))
 
 // 카테고리 클릭 애니메이션
 const categoriItemEls = [...document.querySelectorAll('.category-item')];
@@ -51,23 +51,23 @@ for (let i = 0; i < categoriItemEls.length; i++) {
 }
 
 // 스크롤 애니메이션
-const categoryWrapEl = document.querySelector('.category-wrap');
+const categoryWrapEl = document.querySelector('.category-wrap')
 const CHECK_DOWN_SCROLL = 1;
 
 window.addEventListener('scroll', function () {
     window.scrollY > CHECK_DOWN_SCROLL ? checkClassCategory() : RemoveClassToCategory()
 });
 
-const checkClassCategory = () => categoryWrapEl.classList.contains('on') ? 'return' : AddClassToCategory();
+const checkClassCategory = () => categoryWrapEl.classList.contains('on') ? 'return' : AddClassToCategory()
 const AddClassToCategory = () => categoryWrapEl.classList.add('on');
 const RemoveClassToCategory = () => categoryWrapEl.classList.remove('on');
 
 // 룸 정보
-const roomData = JSON.parse(JSON.stringify(roomList));
-const roomInfoEl = document.querySelector('.room-info');
+const roomData = JSON.parse(JSON.stringify(roomList))
+const roomInfoEl = document.querySelector('.room-info')
 
 for (let i = 0; i < 20; i++) {
-    const div = document.createElement('div');
+    const div = document.createElement('div')
 
     template = `
     <a href="javascript:void(0)">
@@ -83,9 +83,9 @@ for (let i = 0; i < 20; i++) {
     </a>    
     `;
 
-    div.classList.add('room-item');
+    div.classList.add('room-item')
     div.innerHTML = template
-    roomInfoEl.appendChild(div);
+    roomInfoEl.appendChild(div)
 }
 
 window.addEventListener('scroll', getRoomData)
@@ -96,13 +96,13 @@ function getRoomData() {
     const winScrollValue = Math.floor((window.scrollY + window.innerHeight) * 1.002)
     const bodyScrollHeight = Math.floor(document.body.scrollHeight)
     const roomDataLength = roomData.length
-    let getDataNum = parseInt(roomItemValue + 6)
+    let getDataNum = parseInt(roomItemValue + 20)
 
 
     if (winScrollValue >= bodyScrollHeight) {
         if (roomDataLength >= roomItemEls.length) {
             for (let i = roomItemValue; i < getDataNum; i++) {
-                const div = document.createElement('div');
+                const div = document.createElement('div')
                 roomItemValue = parseInt(roomItemValue + 1)
 
                 template = `
@@ -119,9 +119,9 @@ function getRoomData() {
                 </a>    
                 `;
 
-                div.classList.add('room-item');
+                div.classList.add('room-item')
                 div.innerHTML = template
-                roomInfoEl.appendChild(div);
+                roomInfoEl.appendChild(div)
             }
         }
     }
