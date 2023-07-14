@@ -9,7 +9,7 @@
       position: relative;
       .category {
         display: flex;
-        gap: 50px;
+        gap: 51px;
         .category-item {
           position: relative;
           flex-basis: auto;
@@ -71,6 +71,7 @@
         &.right {
           right: 0;
           background-color: $white;
+          box-shadow: -10px 0 10px 10px $white;
         }
       }
     }
