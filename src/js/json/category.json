@@ -1,0 +1,152 @@
+categoryList = [
+    {
+        "id": 1,
+        "url": "https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg",
+        "title": "멋진 수영장"
+    },
+    {
+        "id": 2,
+        "url": "https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg",
+        "title": "방"
+    },
+    {
+        "id": 3,
+        "url": "https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg",
+        "title": "해변 바로 앞"
+    },
+    {
+        "id": 4,
+        "url": "https://a0.muscache.com/pictures/248f85bf-e35e-4dc3-a9a1-e1dbff9a3db4.jpg",
+        "title": "세상의 꼭대기"
+    },
+    {
+        "id": 5,
+        "url": "https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg",
+        "title": "Luxe"
+    },
+    {
+        "id": 6,
+        "url": "https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg",
+        "title": "한적한 시골"
+    },
+    {
+        "id": 7,
+        "url": "https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg",
+        "title": "최고의 전망"
+    },
+    {
+        "id": 8,
+        "url": "https://a0.muscache.com/pictures/51f5cf64-5821-400c-8033-8a10c7787d69.jpg",
+        "title": "한옥"
+    },
+    {
+        "id": 9,
+        "url": "https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg",
+        "title": "국립공원"
+    },
+    {
+        "id": 10,
+        "url": "https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg",
+        "title": "캠핑장"
+    },
+    {
+        "id": 11,
+        "url": "https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg",
+        "title": "인기 급상승"
+    },
+    {
+        "id": 12,
+        "url": "https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg",
+        "title": "농장"
+    },
+    {
+        "id": 13,
+        "url": "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg",
+        "title": "기상천외한 숙소"
+    },
+    {
+        "id": 14,
+        "url": "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg",
+        "title": "초소형 주택"
+    },
+    {
+        "id": 15,
+        "url": "https://a0.muscache.com/pictures/827c5623-d182-474a-823c-db3894490896.jpg",
+        "title": "료칸"
+    },
+    {
+        "id": 16,
+        "url": "https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg",
+        "title": "키즈"
+    },
+    {
+        "id": 17,
+        "url": "https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg",
+        "title": "호숫가"
+    },    
+    {
+        "id": 18,
+        "url": "https://a0.muscache.com/pictures/50861fca-582c-4bcc-89d3-857fb7ca6528.jpg",
+        "title": "디자인"
+    },    
+    {
+        "id": 19,
+        "url": "https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg",
+        "title": "통나무집"
+    },    
+    {
+        "id": 20,
+        "url": "https://a0.muscache.com/pictures/c8bba3ed-34c0-464a-8e6e-27574d20e4d2.jpg",
+        "title": "스키"
+    },    
+    {
+        "id": 21,
+        "url": "https://a0.muscache.com/pictures/ee9e2a40-ffac-4db9-9080-b351efc3cfc4.jpg",
+        "title": "열대 지역"
+    },    
+    {
+        "id": 22,
+        "url": "https://a0.muscache.com/pictures/a4634ca6-1407-4864-ab97-6e141967d782.jpg",
+        "title": "호수 근처"
+    },    
+    {
+        "id": 23,
+        "url": "https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg",
+        "title": "신규"
+    },    
+    {
+        "id": 24,
+        "url": "https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg",
+        "title": "캐슬"
+    },    
+    {
+        "id": 25,
+        "url": "https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg",
+        "title": "상징적 도시"
+    },    
+    {
+        "id": 26,
+        "url": "https://a0.muscache.com/pictures/9a2ca4df-ee90-4063-b15d-0de7e4ce210a.jpg",
+        "title": "속세를 벗어난 숙소"
+    },    
+    {
+        "id": 27,
+        "url": "https://a0.muscache.com/pictures/60ff02ae-d4a2-4d18-a120-0dd274a95925.jpg",
+        "title": "와인 농장"
+    },    
+    {
+        "id": 28,
+        "url": "https://a0.muscache.com/pictures/5ed8f7c7-2e1f-43a8-9a39-4edfc81a3325.jpg",
+        "title": "B&B"
+    },    
+    {
+        "id": 29,
+        "url": "https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg",
+        "title": "저택"
+    },    
+    {
+        "id": 30,
+        "url": "https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg",
+        "title": "트리하우스"
+    },    
+]

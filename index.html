@@ -1,79 +1,104 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>여행은 살아보는 거야 - 에어비앤비</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여행은 살아보는 거야 - 에어비앤비</title>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="에어비앤비 카피사이트" />
-  <meta property="og:title" content="에어비앤비 카피사이트" />
-  <meta property="og:description" content="이 사이트는 개인 사이드 프로젝트로 에어비앤비 카피 사이트입니다" />
-  <meta property="og:image" content="./images/logo.png" />
-  <meta property="og:url" content="https://tkyoun0421.github.io/airbnb__copy/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="에어비앤비 카피사이트" />
+    <meta property="og:title" content="에어비앤비 카피사이트" />
+    <meta property="og:description" content="이 사이트는 개인 사이드 프로젝트로 에어비앤비 카피 사이트입니다" />
+    <meta property="og:image" content="./images/logo.png" />
+    <meta property="og:url" content="https://tkyoun0421.github.io/airbnb__copy/" />
 
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:site" content="에어비앤비 카피사이트" />
-  <meta property="twitter:title" content="에어비앤비 카피사이트" />
-  <meta property="twitter:description" content="이 사이트는 개인 사이드 프로젝트로 에어비앤비 카피 사이트입니다" />
-  <meta property="twitter:image" content="./images/logo.png" />
-  <meta property="twitter:url" content="https://tkyoun0421.github.io/airbnb__copy/" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="에어비앤비 카피사이트" />
+    <meta property="twitter:title" content="에어비앤비 카피사이트" />
+    <meta property="twitter:description" content="이 사이트는 개인 사이드 프로젝트로 에어비앤비 카피 사이트입니다" />
+    <meta property="twitter:image" content="./images/logo.png" />
+    <meta property="twitter:url" content="https://tkyoun0421.github.io/airbnb__copy/" />
 
-  <link rel="icon" href="./src/images/icon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="./src/css/style.css">
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/97e703ac45.js" crossorigin="anonymous"></script>
-  <script defer src="./src/js/main.js"></script>
-</head>
-<body>
-  <header id="header">
-    <div class="inner">
-      <div class="logo">
-        <h1>
-          <a href="javascript:void(0)">
-            <img src="./src/images/logo.png" alt="에어비앤비 로고">
-          </a>
-          <span class="sr-only">에어비앤비 로고</span>
-        </h1>
-      </div>
-      <div class="search">
-        <button type="button" class="search-btn">
-          <div class="search-text">어디든지</div>
-          <div class="search-text ">언제든 일주일</div>
-          <div class="search-text grey">게스트 추가</div>
-          <span class="search-ico">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </span>
-          <span class="sr-only">검색</span>
-        </button>
-      </div>
-      <ul class="util">
-        <li class="user-space"><a href="javascript:void(0)">당신의 공간을 에어비앤비하세요</a></li>
-        <li class="languege">
-          <button type="button">
-            <i class="fa-solid fa-globe"></i>
+    <link rel="icon" href="./src/images/icon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- font awesome -->
+    <script defer src="https://kit.fontawesome.com/97e703ac45.js" crossorigin="anonymous"></script>
+    <script defer src="./src/js/json/category.json" type="text/javascript"></script>
+    <script defer src="./src/js/main.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="inner">
+        <div class="logo">
+          <h1>
+            <a href="javascript:void(0)">
+              <img src="./src/images/logo.png" alt="에어비앤비 로고" />
+            </a>
+            <span class="sr-only">에어비앤비 로고</span>
+          </h1>
+        </div>
+        <div class="search">
+          <button type="button" class="search-btn">
+            <div class="search-text">어디든지</div>
+            <div class="search-text">언제든 일주일</div>
+            <div class="search-text grey">게스트 추가</div>
+            <span class="search-ico">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <span class="sr-only">검색</span>
           </button>
-        </li>
-        <li class="bar">
-          <button type="button" class="sign-btn">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-circle-user"></i>
-          </button>
-          <div class="user">
-            <div class="depth-1">
-              <button type="button" class="sign-up"><strong>회원 가입</strong></button>
-              <button type="button" class="sign-in">로그인</button>
+        </div>
+        <ul class="util">
+          <li class="user-space">
+            <a href="javascript:void(0)">당신의 공간을 에어비앤비하세요</a>
+          </li>
+          <li class="languege">
+            <button type="button">
+              <i class="fa-solid fa-globe"></i>
+            </button>
+          </li>
+          <li class="bar">
+            <button type="button" class="sign-btn">
+              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-circle-user"></i>
+            </button>
+            <div class="user">
+              <div class="depth-1">
+                <button type="button" class="sign-up">
+                  <strong>회원 가입</strong>
+                </button>
+                <button type="button" class="sign-in">로그인</button>
+              </div>
+              <div class="depth-2">
+                <a href="javascript:void(0)">당신의 공간을 에어비앤비하세요</a>
+                <a href="javascript:void(0)">도움말</a>
+              </div>
             </div>
-            <div class="depth-2">
-              <a href="javascript:void(0)">당신의 공간을 에어비앤비하세요</a>
-              <a href="javascript:void(0)">도움말</a>
-            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="category-wrap">
+      <div class="inner">
+        <div class="container">
+          <div class="category"></div>    
+          <div class="category-btn left">
+            <button type="button"><i class="fa-solid fa-angle-left"></i></button>
           </div>
-        </li>
-      </ul>
+          <div class="category-btn right">
+            <button type="button"><i class="fa-solid fa-angle-right"></i></button>
+          </div>
+        </div>
+        <div class="category-filter">
+          <button type="button">
+            <i class="fa-solid fa-sliders"></i>
+            <span>필터</span>
+          </button>
+        </div>
+      </div>
+      </div>
     </div>
-  </header>
-</body>
+  </body>
 </html>
