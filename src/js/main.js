@@ -5,14 +5,14 @@ const userEl = document.querySelector('.user')
 barEl.addEventListener('click', function (e) {
     e.stopPropagation()
     !barEl.classList.contains('show') ? showUserMenu() : hideUserMenu();
-});
+})
 
 window.addEventListener('click', function () {
     hideUserMenu()
-});
+})
 userEl.addEventListener('click', function (e) {
     e.stopPropagation() // 이벤트 버블링 막는 것
-});
+})
 
 const hideUserMenu = () => barEl.classList.remove('show')
 const showUserMenu = () => barEl.classList.add('show')
@@ -52,15 +52,15 @@ for (let i = 0; i < categoriItemEls.length; i++) {
 
 // 스크롤 애니메이션
 const categoryWrapEl = document.querySelector('.category-wrap')
-const CHECK_DOWN_SCROLL = 1;
+const CHECK_SCROLL_DOWN = 1;
 
 window.addEventListener('scroll', function () {
-    window.scrollY > CHECK_DOWN_SCROLL ? checkClassCategory() : RemoveClassToCategory()
-});
+    window.scrollY > CHECK_SCROLL_DOWN ? checkClassCategory() : RemoveClassToCategory()
+})
 
 const checkClassCategory = () => categoryWrapEl.classList.contains('on') ? 'return' : AddClassToCategory()
-const AddClassToCategory = () => categoryWrapEl.classList.add('on');
-const RemoveClassToCategory = () => categoryWrapEl.classList.remove('on');
+const AddClassToCategory = () => categoryWrapEl.classList.add('on')
+const RemoveClassToCategory = () => categoryWrapEl.classList.remove('on')
 
 // 룸 정보
 const roomData = JSON.parse(JSON.stringify(roomList))
@@ -73,6 +73,21 @@ for (let i = 0; i < 20; i++) {
     <a href="javascript:void(0)">
         <div class="room-img">
             <img src=${roomData[i].url} />
+            <div class="room-like">
+                <button type="button"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            <div class="room-btn right">
+                <button type="button">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+            <ul class="room-dot">
+                <li class="dot on"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+                <li class="dot"></li>
+            </ul>
         </div>
         <div class="room-text">
             <p class="room-location">${roomData[i].location}<span class="room-score"><i class="fa-solid fa-star"></i><span>${roomData[i].score}</span></span></p>
@@ -116,6 +131,21 @@ function getRoomData() {
                         <p class="room-distance">${roomData[i].date}</p>
                         <p class="room-price"><strong>${roomData[i].price}</strong> /박</p>        
                     </div>
+                    <div class="room-like">
+                        <button type="button"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="room-btn right">
+                        <button type="button">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                    <ul class="room-dot">
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                    </ul>
                 </a>    
                 `;
 

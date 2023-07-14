@@ -86,8 +86,7 @@
         }
       }
       .category-btn {
-        display: flex;
-        align-items: center;
+        @include flexAlign(null, center);
         font-size: 12px;
         height: 100%;
         position: absolute;

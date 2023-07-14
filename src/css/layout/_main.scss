@@ -1,5 +1,5 @@
 #main {
-  max-width: 2300px;
+  max-width: 2500px;
   margin: 0 auto;
   padding-top: 180px;
   padding-bottom: 80px;
@@ -33,10 +33,70 @@
             height: 65%;
             border-radius: 20px;
             overflow: hidden;
+            position: relative;
+            &:hover .room-btn {
+              visibility: visible;
+              opacity: 0.9;
+            }
             img {
               object-fit: cover;
               width: 100%;
               height: 100%;
+            }
+            .room-like {
+              position: absolute;
+              top: 5%;
+              right: 5%;
+              button {
+                font-size: 20px;
+                i {
+                  color: rgba(0, 0, 0 , 0.7);
+                  text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
+                }
+              }
+            }
+            .room-btn {
+              @include flexAlign(null, center);
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translate(-50%, -50%) scale(0.9);
+              background: $white;
+              border: 0.5px solid rgba(0, 0, 0, 0.3);
+              border-radius: 50%;
+              background-color: $white;
+              visibility: none;
+              opacity: 0;
+              transition: .4s;
+              &:hover {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+              }
+              button {
+                width: 28px;
+                height: 28px;
+                font-size: 12px;
+                text-align: center;
+              }
+            }
+            .room-dot {
+              position: absolute;
+              left: 50%;
+              bottom: 5%;
+              transform: translate(-50%, -50%);
+              display: flex;
+              justify-content: space-between;
+              width: 50px;
+              .dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 6px;
+                background-color: $white;
+                opacity: .5;
+                &.on {
+                  opacity: 1;
+                }
+              }
             }
           }
           .room-text {
