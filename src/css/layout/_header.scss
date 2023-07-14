@@ -9,9 +9,10 @@
   background-color: $white;
   z-index: 999;
   .inner {
-    @include flexAlign(space-between, center);
+    @include flexAlign(null, center);
     height: 80px;
     .logo {
+      flex: 1 1 0;
       h1 {
         img {
           width: 118px;
@@ -21,6 +22,7 @@
     .search {
       @include flexAlign(center, null);
       position: relative;
+      flex: 1 1 0;
       .search-btn {
         @include flexAlign(space-around, center);
         width: 363px;
@@ -63,6 +65,7 @@
       }
     }
     .util {
+      flex: 1 1 0;
       @include flexAlign(end, center);
       .user-space {
         a {

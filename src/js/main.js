@@ -2,19 +2,15 @@
 const barEl = document.querySelector('.bar');
 const userEl = document.querySelector('.user');
 
-barEl.addEventListener('click', function(e){
+barEl.addEventListener('click', function (e) {
     e.stopPropagation()
-    if (!barEl.classList.contains('show')) {
-        showUserMenu()
-    } else {
-        hideUserMenu()
-    }
+    !barEl.classList.contains('show') ? showUserMenu() : hideUserMenu();
 });
 
-window.addEventListener('click', function(){
+window.addEventListener('click', function () {
     hideUserMenu()
 });
-userEl.addEventListener('click', function(e){
+userEl.addEventListener('click', function (e) {
     e.stopPropagation() // 이벤트 버블링 막는 것
 });
 
@@ -26,13 +22,13 @@ const categoryData = JSON.parse(JSON.stringify(categoryList));
 const categoryEl = document.querySelector('.category');
 let template = '';
 
-for(let i = 0; i < categoryData.length; i++) {
+for (let i = 0; i < categoryData.length; i++) {
     const div = document.createElement('div')
 
     template = `
     <button type="button">
-        <img src=${categoryData[i].url}>
-        <span>${categoryData[i].title}</span>
+    <img src=${categoryData[i].url}>
+    <span>${categoryData[i].title}</span>
     </button>
     `
     div.classList.add('category-item')
@@ -40,21 +36,58 @@ for(let i = 0; i < categoryData.length; i++) {
     categoryEl.appendChild(div)
 }
 
+window.addEventListener('load', function () {
+    categoryEl.childNodes[0].classList.add('active');
+});
+
+// 카테고리 클릭 애니메이션
+const categoriItemEls = [...document.querySelectorAll('.category-item')];
+
+for (let i = 0; i < categoriItemEls.length; i++) {
+    categoriItemEls[i].addEventListener('click', function (e) {
+        for (let i = 0; i < categoriItemEls.length; i++) {
+            categoriItemEls[i].classList.remove('active')
+        }
+        e.currentTarget.classList.add('active')
+    });
+}
+
 // 스크롤 애니메이션
 const categoryWrapEl = document.querySelector('.category-wrap');
 const CHECK_DOWN_SCROLL = 1;
 
-window.addEventListener('scroll', function(){
-    if(window.scrollY > CHECK_DOWN_SCROLL) {
-        if (categoryWrapEl.classList.contains('on')){
-            return
-        } else {
-            AddClassToCategory()
-        }
-    } else {
-        RemoveClassToCategory()
-    }
+window.addEventListener('scroll', function () {
+    window.scrollY > CHECK_DOWN_SCROLL ? checkClassCategory() : RemoveClassToCategory()
 });
 
+const checkClassCategory = () => categoryWrapEl.classList.contains('on') ? 'return' : AddClassToCategory();
 const AddClassToCategory = () => categoryWrapEl.classList.add('on');
 const RemoveClassToCategory = () => categoryWrapEl.classList.remove('on');
+
+// 룸 정보
+const roomData = JSON.parse(JSON.stringify(roomList));
+const roomInfoEl = document.querySelector('.room-info');
+
+for (let i = 0; i < roomList.length; i++) {
+    const div = document.createElement('div');
+
+    template = `
+    <a href="javascript:void(0)">
+        <div class="room-img">
+            <img src=${roomData[i].url} />
+        </div>
+        <div class="room-text">
+            <p class="room-location">${roomData[i].location}<span class="room-score"><i class="fa-solid fa-star"></i><span>${roomData[i].score}</span></span></p>
+            <p class="room-distance">${roomData[i].distance}</p>
+            <p class="room-distance">${roomData[i].date}</p>
+            <p class="room-price"><strong>${roomData[i].price}</strong> /박</p>        
+        </div>
+    </a>    
+    `;
+
+    div.classList.add('room-item');
+    div.innerHTML = template
+    roomInfoEl.appendChild(div);
+
+}
+
