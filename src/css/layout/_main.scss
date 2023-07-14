@@ -8,6 +8,18 @@
       grid-template-rows: repeat(1, 1fr);
       grid-auto-rows: 1fr;
       gap: 20px 25px;
+      @include bp1600() {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      @include bp1200 () {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include bp1000 () {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include bp800 () {
+        grid-template-columns: repeat(1, 1fr);
+      }
       .room-item {
         a {
           height: 100%;
