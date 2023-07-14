@@ -1,5 +1,10 @@
 .category-wrap {
-  padding-top: 80px;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  z-index: 998;
+  transition: 0.4s;
+  background-color: $white;
   .inner {
     @include flexAlign(space-between, center);
     margin-top: 20px;
@@ -14,7 +19,7 @@
         .category-item {
           position: relative;
           flex-basis: auto;
-          flex-shrink: 0;
+          flex-shrink: 0;          
           button {
             display: flex;
             flex-direction: column;
@@ -46,6 +51,38 @@
             height: 2px;
             background-color: $greyE9;
           }
+          &.active {   
+            animation: clickAni;
+            animation-duration: .1s;           
+            button {
+              img {
+                opacity: 1;
+              }
+              span {
+                opacity: 1;
+              }
+            }
+            & ::after {
+              position: absolute;
+              content: "";
+              bottom: 0;
+              display: block;
+              width: 100%;
+              height: 2px;
+              background-color: $grey22;
+            }
+          }
+        }
+      }
+      @keyframes clickAni {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
         }
       }
       .category-btn {
@@ -92,11 +129,9 @@
     }
   }
   &.on {
-    position: fixed;
-    width: 100%;
     .inner {
       margin-top: 0;
-      box-shadow: 0px 1px 1px $greyDD;
+      box-shadow: 0px 2px 2px $greyDD;
     }
   }
 }

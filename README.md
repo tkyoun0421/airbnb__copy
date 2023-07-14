@@ -3,6 +3,9 @@
 12조 첫번째 사이드 프로젝트` 입니다.  
 에어비앤비 메인 페이지를 **디자인 카피하여** `HTML, SCSS, Vanilla Javascript`을 사용하여 제작하였습니다.
 
+### 프로젝트 사이트 주소(새 창으로 열기)
+<a href="https://tkyoun0421.github.io/airbnb__copy/" target="_blank">https://tkyoun0421.github.io/airbnb__copy/</a>
+
 <br/>
 
 ---

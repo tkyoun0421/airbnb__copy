@@ -1,9 +1,10 @@
-@import '../css/abstracts/mixins'; // 믹스인
-@import '../css/abstracts/variables'; // 변수
+@import "../css/abstracts/mixins"; // 믹스인
+@import "../css/abstracts/variables"; // 변수
 
-@import '../css/base/common'; // 공통 css
-@import '../css/base/typography'; // 글꼴
+@import "../css/base/common"; // 공통 css
+@import "../css/base/typography"; // 글꼴
 
-@import '../css/layout/header'; // 헤더
-@import '../css/layout//category'; // 카테고리
-@import '../css/layout/footer'; // 푸터
+@import "../css/layout/header"; // 헤더
+@import "../css/layout/category"; // 카테고리
+@import "../css/layout/main"; // 메인
+@import "../css/layout/footer"; // 푸터
