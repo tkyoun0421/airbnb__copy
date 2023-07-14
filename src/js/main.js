@@ -76,7 +76,7 @@ for (let i = 0; i < 20; i++) {
             <div class="room-like">
                 <button type="button"><i class="fa-solid fa-heart"></i></button>
             </div>
-            <div class="room-btn right">
+            <div class="room-btn">
                 <button type="button">
                     <i class="fa-solid fa-angle-right"></i>
                 </button>
@@ -124,28 +124,28 @@ function getRoomData() {
                 <a href="javascript:void(0)">
                     <div class="room-img">
                         <img src=${roomData[i].url} />
+                        <div class="room-like">
+                            <button type="button"><i class="fa-solid fa-heart"></i></i></button>
+                        </div>
+                        <div class="room-btn">
+                            <button type="button">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                        <ul class="room-dot">
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                        </ul>
                     </div>
                     <div class="room-text">
                         <p class="room-location">${roomData[i].location}<span class="room-score"><i class="fa-solid fa-star"></i><span>${roomData[i].score}</span></span></p>
                         <p class="room-distance">${roomData[i].distance}</p>
                         <p class="room-distance">${roomData[i].date}</p>
                         <p class="room-price"><strong>${roomData[i].price}</strong> /박</p>        
-                    </div>
-                    <div class="room-like">
-                        <button type="button"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                    <div class="room-btn right">
-                        <button type="button">
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
-                    </div>
-                    <ul class="room-dot">
-                        <li class="dot"></li>
-                        <li class="dot"></li>
-                        <li class="dot"></li>
-                        <li class="dot"></li>
-                        <li class="dot"></li>
-                    </ul>
+                    </div>                    
                 </a>    
                 `;
 
