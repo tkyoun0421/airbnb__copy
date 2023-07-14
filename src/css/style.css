@@ -35,6 +35,21 @@ button {
 .inner {
   padding: 0 80px;
 }
+@media (min-width: 0) and (max-width: 1600px) {
+  .inner {
+    padding: 0 60px;
+  }
+}
+@media (min-width: 0) and (max-width: 1200px) {
+  .inner {
+    padding: 0 50px;
+  }
+}
+@media (min-width: 0) and (max-width: 800px) {
+  .inner {
+    padding: 0 20px;
+  }
+}
 
 body {
   font-family: "Roboto", "Noto Sans KR", sans-serif;
@@ -360,6 +375,7 @@ button {
 
 #main {
   padding-top: 180px;
+  padding-bottom: 80px;
 }
 #main .inner {
   margin-top: 16px;
@@ -434,4 +450,69 @@ button {
 }
 #main .inner .room-info .room-item a .room-text .room-price strong {
   font-weight: 700;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff;
+}
+#footer .inner {
+  position: relative;
+  border-top: 1px solid #dddddd;
+}
+#footer .inner .footer-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #dddddd;
+}
+#footer .inner .footer-info .footer-info__left {
+  display: flex;
+}
+#footer .inner .footer-info .footer-info__left ul {
+  display: flex;
+}
+#footer .inner .footer-info .footer-info__left ul li {
+  display: flex;
+  margin-left: 20px;
+}
+#footer .inner .footer-info .footer-info__left ul li span {
+  font-size: 1px;
+}
+#footer .inner .footer-info .footer-info__left ul li a:hover {
+  text-decoration: underline;
+}
+#footer .inner .footer-info .footer-info__right ul {
+  display: flex;
+  gap: 36px;
+  font-size: 14px;
+  font-weight: 500;
+}
+#footer .inner .footer-notice {
+  padding: 8px 0;
+  font-size: 11px;
+  color: #717171;
+}
+#footer .inner .map {
+  position: absolute;
+  top: -90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#footer .inner .map button {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 14px 19px;
+  border-radius: 30px;
+  font-size: 15px;
+  text-align: center;
+  transition: 0.2s;
+}
+#footer .inner .map button:hover {
+  transform: scale(1.025);
+}
+#footer .inner .map button i {
+  margin-left: 5px;
 }/*# sourceMappingURL=style.css.map */
