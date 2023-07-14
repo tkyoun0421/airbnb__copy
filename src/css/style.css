@@ -447,19 +447,20 @@ button {
   align-items: center;
   position: absolute;
   top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%) scale(0.9);
+  right: 13px;
+  transform: transition(0, -50%) scale(0.9);
   background: #ffffff;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   background-color: #ffffff;
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   transition: 0.4s;
 }
 #main .inner .room-info .room-item a .room-img .room-btn:hover {
+  visibility: visible;
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: transition(0, -50%) scale(1);
 }
 #main .inner .room-info .room-item a .room-img .room-btn button {
   width: 28px;
